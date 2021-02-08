@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { List, Datagrid, Filter, TextInput, TextField, NumberField, DateField, SelectInput, ImageField, SelectField, EditButton } from 'react-admin';
 import { ACCOUNT_STATUS_CHOICES, MARITAL_STATUS_CHOICES } from "./contants";
 
@@ -27,6 +27,7 @@ export const UserAccountList = (props: any) => {
                 <SelectField source="marital_status" choices={MARITAL_STATUS_CHOICES} />
                 <SelectField source="status" choices={ACCOUNT_STATUS_CHOICES} />
                 <NumberField source="age" />
+                <NumberField source="num_reports" label="Number of Reports" />
                 <DateField source="created_date" />
                 <DateField source="updated_date" />
                 <EditButton />
