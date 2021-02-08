@@ -1,13 +1,8 @@
 import React from "react";
 import {
-    Edit, List, Datagrid, Filter, TextInput, TextField, ReferenceField, DateField, SelectInput, ImageField, SelectField, SimpleForm, EditButton
+    List, Datagrid, Filter, TextInput, TextField, ReferenceField, DateField, SelectInput, ImageField, SelectField, EditButton
 } from "react-admin";
-
-const VERIFY_STATUS_CHOICES = [
-    { id: -1, name: "REJECTED" },
-    { id: 0, name: "PENDING" },
-    { id: 1, name: "VERIFED" }
-]
+import { VERIFY_STATUS_CHOICES } from "./contants";
 
 const AccountVerifyFilter = (props: any) => {
     return (
@@ -17,24 +12,6 @@ const AccountVerifyFilter = (props: any) => {
         </Filter>
     )
 }
-
-export const AccountVerifyForm = (props: any) => {
-    return (
-        <SimpleForm {...props}>
-            <TextInput source="id" label="Id" disabled />
-            <SelectInput source="status" label="Status" choices={VERIFY_STATUS_CHOICES} />
-        </SimpleForm>
-    )
-}
-
-export const AccountVerifyEdit = (props: any) => {
-    return (
-        <Edit {...props}>
-            <AccountVerifyForm />
-        </Edit>
-    )
-}
-
 
 export const AccountVerifyList = (props: any) => {
     return (
